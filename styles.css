@@ -1,0 +1,107 @@
+/* FONDO GENERAL */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #12001a; /* morado muy oscuro */
+  color: #e8d9ff;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: 420px;
+  margin: 50px auto;
+  background: rgba(60, 0, 80, 0.45); /* efecto glass morado */
+  padding: 25px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(150, 0, 255, 0.25);
+  border: 1px solid rgba(200, 150, 255, 0.2);
+}
+
+/* TÍTULO */
+h1 {
+  text-align: center;
+  color: #e5c9ff;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* FORMULARIO */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUTS Y SELECTS */
+input, select {
+  padding: 12px;
+  background: #260033;
+  color: #f3dfff;
+  border: 1px solid #7a00cc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+  caret-color: #d7a2ff; /* cursor morado claro */
+}
+
+input:focus, select:focus {
+  border-color: #c770ff;
+  box-shadow: 0 0 10px #9b00ff80;
+}
+
+/* FIX PARA EL AUTOCOMPLETADO (Chrome y navegadores basados en Webkit) */
+input:-webkit-autofill {
+  -webkit-text-fill-color: #f3dfff !important;
+  caret-color: #d7a2ff !important;
+  box-shadow: 0 0 0px 1000px #260033 inset !important;
+  border: 1px solid #7a00cc !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* BOTÓN */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8e00ff, #d600ff);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 0px 15px #c900ff80;
+}
+
+/* RESULTADOS */
+#resultado {
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(80, 0, 100, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(200, 150, 255, 0.2);
+  box-shadow: 0 0 20px rgba(140, 0, 255, 0.15);
+}
+
+h3 {
+  color: #ffdbff;
+  margin-bottom: 10px;
+}
+
+/* QUITAR FLECHAS DE INPUT TYPE NUMBER EN CHROME */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* QUITAR FLECHAS EN FIREFOX */
+input[type=number] {
+  -moz-appearance: textfield;
+}
